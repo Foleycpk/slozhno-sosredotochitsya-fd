@@ -36,7 +36,7 @@
 
 .header__decorated-element::before {
   content: "rec";
-  color: var(--accent-color, #ff0070);
+  color: var(--decore-color, #ff0070);
   text-align: center;
   text-transform: uppercase;
 }
@@ -47,8 +47,8 @@
   width: 9px;
   height: 9px;
   border-radius: 100%;
-  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
-  background-color: var(--accent-color, #ff0070);
+  box-shadow: 0 0 4px 2px var(--decore-color, #ff0070);
+  background-color: var(--decore-color, #ff0070);
 }
 
 .decorated-zone::before {
@@ -58,8 +58,8 @@
   right: 0;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color, #ff0070);
-  border-right: 1px solid var(--accent-color, #ff0070);
+  border-top: 1px solid var(--decore-color, #ff0070);
+  border-right: 1px solid var(--decore-color, #ff0070);
 }
 
 .decorated-zone::after {
@@ -69,8 +69,8 @@
   left: 0;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color, #ff0070);
-  border-left: 1px solid var(--accent-color, #ff0070);
+  border-bottom: 1px solid var(--decore-color, #ff0070);
+  border-left: 1px solid var(--decore-color, #ff0070);
 }
 
 .header__theme-menu {
@@ -78,23 +78,40 @@
   align-self: center;
 }
 
-/* TO DO удалить */
-
-/* .header__theme-menu-list {
+.header__theme-menu-list {
   display: flex;
   align-items: center;
-} */
+  flex-direction: column;
+  gap: var(--small-margin, 10px);
+} 
 
 .header__theme-menu-button {
   border: none;
-  color: var(--accent-color, #ff0070);
+  color: var(--decore-color, #ff0070);
   text-align: center;
   background-color: transparent;
   text-transform: lowercase;
+  line-height: 100%;
+  padding: 1.5px 13px;
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--decore-color-transparency, rgba(255, 0, 112, 0.4));
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+border-bottom: 1px solid var(--decore-color, #ff0070);
+}
+
+
+
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color, #ff0070);
+  border: 1px solid var(--decore-color, #ff0070);
+  pointer-events: none;
 }
 
 .header__title {
@@ -113,7 +130,7 @@
   inline-size: 100%;
 }
 .title-decor {
-  color: var(--titel-color, #000028);
+  color: var(--title-color, #000028);
   background-color: var(--accent-color, #ff0070);
 }
 
@@ -161,7 +178,7 @@
 }
 
 .article__link:focus-visible {
-  border: 1px solid currentColor;
+  outline: 1px solid currentColor;
 }
 
 /* .gallery__title {
@@ -252,7 +269,7 @@
   }
   
   .header__theme-menu-list {
-    display: flex;
+    flex-direction: row;
   }
 
   .section:nth-child(even) .section__list {
