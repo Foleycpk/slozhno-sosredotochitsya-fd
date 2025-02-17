@@ -5,7 +5,7 @@
 */
 
 :root.theme-light {
-  --bg-color: #ffc2e6;
+  --bg-color: #fff1;
   --main-color: #353430;
   --main-title-color: #ffc2e6;
   --accent-color: #ff8dcb;
@@ -22,7 +22,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-color: #ffc2e6;
+    --bg-color: #fff1;
     --main-color: #353430;
     --main-title-color: #ffc2e6;
     --accent-color: #ff8dcb;
